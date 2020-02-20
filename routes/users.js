@@ -1,8 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var fs=require('fs')
-//const checkUser=require('../checkuser');
-
 const shortid = require('shortid');
 const _=require('lodash');
 const updateJsonFile = require("update-json-file");
@@ -14,7 +11,7 @@ const professor_db='./data/professors.json';
 const course_db='./data/courses.json';
 
 //Initializing the class
-const FileDataOperations=require('../FileDataOperations');
+const FileDataOperations=require('../FileDataOperationsClass');
 const db=new FileDataOperations();
 
 

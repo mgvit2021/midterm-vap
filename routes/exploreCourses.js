@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 const updateJsonFile = require("update-json-file");
-const shortid = require('shortid');
 const _=require('lodash');
 
 
@@ -10,7 +9,7 @@ const professor_db='./data/professors.json';
 const course_db='./data/courses.json';
 
 //Initializing the class
-const FileDataOperations=require('../FileDataOperations');
+const FileDataOperations=require('../FileDataOperationsClass');
 const db=new FileDataOperations();
 
 router.get('/:sid',function(req,res){
