@@ -11,9 +11,10 @@ const course_db='./data/courses.json';
 
 //Initializing the class
 const FileDataOperations=require('../FileDataOperationsClass');
-const UpdateData=require('../UpdateFileClass');
+const UpdateOperations=require('../UpdateFileClass');
 const db=new FileDataOperations();
-const dbnew=new UpdateData();
+const update=new UpdateOperations();
+
 
 //-------------------------PROFESSOR DASBOARD-----------------------//
 
@@ -83,7 +84,7 @@ if(title=='' || summary==''||domain=='' || duration==''||fees==''||certification
 else{
 db.searchById(pid,professor_db)
 .then((professor)=>{
-  var newCourse={
+  const newCourse={
     id:shortid.generate(),
     title:title,
     t_id:professor.id,
@@ -96,29 +97,29 @@ db.searchById(pid,professor_db)
       certification:certification
     }
   }
+  update.addCourse(professor_db,newCourse)
+  .then(()=>{
+    update.addCoursetoProf(professor_db,newCourse,pid)
+    .then(()=>{res.redirect(`/dashboard/professor/:${pid}`)})
   /*
   updateJsonFile(course_db, data => {
     data.push(newCourse);
     return data;
   })*/
-  dbnew.addCourse(course_db).then(()=>{
-    return newCourse;
-  })
-  .then((newCourse)=>{
-    updateJsonFile(professor_db, data => {
-      let id=newCourse.id;
-      data.forEach((prof)=>{
-        if(prof.id==pid){
-          prof.courses.push({
-            id:id,
-            title:newCourse.title,
-            summary:newCourse.summary})
-        }
-      });
-      return data;
+})
+  /*
+  updateJsonFile(professor_db, data => {
+    let id=newCourse.id;
+    data.forEach((prof)=>{
+      if(prof.id==pid){
+        prof.courses.push({
+          id:id,
+          title:newCourse.title,
+          summary:newCourse.summary})
+      }
     });
-  })
-  .then(()=>{res.redirect(`/dashboard/professor/:${pid}`)})
+    return data;
+  });*/
 })
 }
 });

@@ -4,7 +4,13 @@
 		"name": "Rajnikant",
 		"email": "rajni@gmail.com",
 		"password": "123456",
-		"courses": []
+		"courses": [
+			{
+				"id": "vzcGYJFS",
+				"title": "Deep Learning",
+				"summary": "UpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperations"
+			}
+		]
 	},
 	{
 		"id": "ang",
@@ -39,6 +45,97 @@
 		"password": "123456",
 		"details": {
 			"courses": []
+		}
+	},
+	{
+		"id": "h1kAzSG2",
+		"title": "Deep Learning",
+		"t_id": "rk",
+		"offered_by": "Rajnikant",
+		"summary": "UpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperations",
+		"domain": "Computer Science",
+		"details": {
+			"duration": "10 weeks",
+			"fees": "1000",
+			"certification": "No"
+		}
+	},
+	{
+		"id": "WJGLMF9L",
+		"title": "Deep Learning",
+		"t_id": "rk",
+		"offered_by": "Rajnikant",
+		"summary": "UpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperations",
+		"domain": "Computer Science",
+		"details": {
+			"duration": "10 weeks",
+			"fees": "1000",
+			"certification": "No"
+		}
+	},
+	{
+		"id": "7f91jXi3",
+		"title": "Deep Learning",
+		"t_id": "rk",
+		"offered_by": "Rajnikant",
+		"summary": "UpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperations",
+		"domain": "Computer Science",
+		"details": {
+			"duration": "10 weeks",
+			"fees": "1000",
+			"certification": "No"
+		}
+	},
+	{
+		"id": "8KbqXBeM",
+		"title": "Deep Learning",
+		"t_id": "rk",
+		"offered_by": "Rajnikant",
+		"summary": "UpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperations",
+		"domain": "Computer Science",
+		"details": {
+			"duration": "10 weeks",
+			"fees": "1000",
+			"certification": "No"
+		}
+	},
+	{
+		"id": "ySN0A-Xp",
+		"title": "Deep Learning",
+		"t_id": "rk",
+		"offered_by": "Rajnikant",
+		"summary": "UpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperations",
+		"domain": "Computer Science",
+		"details": {
+			"duration": "10 weeks",
+			"fees": "1000",
+			"certification": "VSD"
+		}
+	},
+	{
+		"id": "YHQTqROe",
+		"title": "Deep Learning",
+		"t_id": "rk",
+		"offered_by": "Rajnikant",
+		"summary": "UpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperations",
+		"domain": "Computer Science",
+		"details": {
+			"duration": "10 weeks",
+			"fees": "1000",
+			"certification": "VSD"
+		}
+	},
+	{
+		"id": "vzcGYJFS",
+		"title": "Deep Learning",
+		"t_id": "rk",
+		"offered_by": "Rajnikant",
+		"summary": "UpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperationsUpdateOperations",
+		"domain": "Computer Science",
+		"details": {
+			"duration": "10 weeks",
+			"fees": "1000",
+			"certification": "Mridul Gupta"
 		}
 	}
 ]

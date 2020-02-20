@@ -92,5 +92,96 @@
 			"fees": "1000",
 			"certification": "No"
 		}
+	},
+	{
+		"id": "5DFP61AM",
+		"title": "Deep Learning",
+		"t_id": "rk",
+		"offered_by": "Rajnikant",
+		"summary": "qwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnm",
+		"domain": "Computer Science",
+		"details": {
+			"duration": "10 weeks",
+			"fees": "1000",
+			"certification": "Mridul Gupta"
+		}
+	},
+	{
+		"id": "DwSJvP8N",
+		"title": "Deep Learning",
+		"t_id": "rk",
+		"offered_by": "Rajnikant",
+		"summary": "qwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnm",
+		"domain": "Computer Science",
+		"details": {
+			"duration": "10 weeks",
+			"fees": "1000",
+			"certification": "Mridul Gupta"
+		}
+	},
+	{
+		"id": "pUOdfsPu",
+		"title": "Deep Learning",
+		"t_id": "rk",
+		"offered_by": "Rajnikant",
+		"summary": "qwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnm",
+		"domain": "Computer Science",
+		"details": {
+			"duration": "10 weeks",
+			"fees": "1000",
+			"certification": "Mridul Gupta"
+		}
+	},
+	{
+		"id": "OGU_z-Fu",
+		"title": "Deep Learning",
+		"t_id": "rk",
+		"offered_by": "Rajnikant",
+		"summary": "qwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnm",
+		"domain": "Computer Science",
+		"details": {
+			"duration": "10 weeks",
+			"fees": "1000",
+			"certification": "Mridul Gupta"
+		}
+	},
+	{
+		"id": "BJKXXc06",
+		"title": "Deep Learning",
+		"t_id": "rk",
+		"offered_by": "Rajnikant",
+		"summary": "qwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnm",
+		"domain": "Computer Science",
+		"details": {
+			"duration": "10 weeks",
+			"fees": "1000",
+			"certification": "Mridul Gupta"
+		}
+	},
+	{
+		"id": "GNaD9yR8",
+		"title": "Deep Learning",
+		"t_id": "rk",
+		"offered_by": "Rajnikant",
+		"summary": "qwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnm",
+		"domain": "Computer Science",
+		"details": {
+			"duration": "10 weeks",
+			"fees": "1000",
+			"certification": "Mridul Gupta"
+		}
+	},
+	{
+		"id": "BP0ZvBBA",
+		"title": "Deep Learning",
+		"t_id": "rk",
+		"offered_by": "Rajnikant",
+		"summary": "qwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnm",
+		"domain": "Computer Science",
+		"details": {
+			"duration": "10 weeks",
+			"fees": "1000",
+			"certification": "Mridul Gupta"
+		}
 	}
 ]
