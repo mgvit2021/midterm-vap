@@ -1,0 +1,44 @@
+[
+	{
+		"id": "rk",
+		"name": "Rajnikant",
+		"email": "rajni@gmail.com",
+		"password": "123456",
+		"courses": []
+	},
+	{
+		"id": "ang",
+		"name": "Andrew NG",
+		"email": "andrew@gmail.com",
+		"password": "123456",
+		"courses": [
+			{
+				"id": "mls",
+				"title": "Machine Learning",
+				"summary": "The AWS Solutions Architect Certification training will enable you to design, plan and scale AWS implementations utilizing over 70 cloud computing services. The course is aligned with the latest AWS exam featuring Amazon designated best practices."
+			}
+		]
+	},
+	{
+		"id": "js",
+		"name": "Jon Snow",
+		"email": "knowsnothing@gmail.com",
+		"password": "123456",
+		"courses": [
+			{
+				"id": "aws",
+				"title": "AWS Learning",
+				"summary": "The AWS Solutions Architect Certification training will enable you to design, plan and scale AWS implementations utilizing over 70 cloud computing services. The course is aligned with the latest AWS exam featuring Amazon designated best practices."
+			}
+		]
+	},
+	{
+		"id": "1WsxiG2V",
+		"name": "Teacher",
+		"email": "qwer@gmail.com",
+		"password": "123456",
+		"details": {
+			"courses": []
+		}
+	}
+]

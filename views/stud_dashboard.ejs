@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <%-include('./partials/styles')%>  
+</head>
+<body>
+    <%-include('./partials/nav_student');%> 
+    <div class="container mt-4">
+             <h1>Welcome <%=name %> </h1>
+            <h2 class="mt-4">Enrolled Courses:</h2>
+        </div>
+    <div class="container mt-4">
+        <% if (courses.length>0){ %>
+            <div class="row">
+                <div class="col-md-4">
+                    
+                </div>
+            </div>
+            <div class="card-column">
+            <% courses.forEach(element => { %>
+            
+            <div class="card mb-4">
+                    <div class="card-header">
+                            <h5 class="card-title"><%= element.title %> </h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text lead"><%= element.sum %>.
+                        </p>
+                    </div>
+                <div class="card-footer ">
+                        <b class="float-left">Prof: <%=element.offered_by %> </b>
+                        <form method="POST">
+                                <button type="submit" name="unsub" value='<%=element.cid%>' class="btn btn-primary float-right"">
+                                        Unubscribe
+                                </button>
+                            </form>
+                </div>
+            </div>
+        
+            <% }) %>
+        </div>
+        <% } else { %>
+            <div style="position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%)" 
+            class="container">
+
+                <p class="text-center lead">You have not yet enrolled in any of the courses.<br>
+                    <a href='/dashboard/explore/:<%=sid%>'><em>Click here</em></a> to view catalog.
+                </p>
+            </div>
+        <%}%>
+
+    </div>
+        <%-include('./partials/scripts')%>
+    </body>
+    </html>
+    

@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="text-muted mr-4" >Hi, Prof: <%=professor.name%> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarColor03">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href='add/:<%=professor.id%>'>Create Course<span class="sr-only"></span></a>
+            </li>
+          </ul>
+          <ul class="navbar-nav my-2 my-lg-0">
+          <li class="nav-item">
+              <a class="nav-link" href="/users/login">Logout <i class="fas fa-sign-out-alt"></i></a>
+          </li>
+          </ul>
+        </div>
+      </nav>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <%-include('./partials/styles')%>  
+</head>
+<body>
+        <%-include('./partials/nav_professor');%> 
+        <% if (typeof professor.courses!='undefined'){ %>
+
+            <% if ((professor.courses).length>0){ %>
+                  
+        <div class="container mt-4">
+               <h2 class="mt-4">Your Courses:</h2>
+        </div>
+       <div class="container mt-4">
+           <div class="card-column">
+           <% professor.courses.forEach(element => { %>
+           
+           <div class="card mb-4">
+                   <div class="card-header">
+                           <h5 class="card-title"><%= element.title %> </h5>
+                   </div>
+                   <div class="card-body">
+                       <p class="card-text lead"><%= element.summary %>.
+                       </p>
+                   </div>
+               <div class="card-footer">
+                        <a class="btn btn-primary float-left" href='edit/:<%=professor.id%>&<%=element.id%>'>Edit Details</a>
+                       <form method="POST">
+                               <button type="submit" name="remv" value='<%=element.id%>' class="btn btn-primary float-right">
+                                       Remove
+                               </button>
+                        </form>
+               </div>
+           </div>
+       
+           <% }) %>
+
+           
+           <% } else { %>
+            <div 
+        style="position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)" 
+        class="container">
+        <p class="text-center lead">
+            You are not having any courses under you currently.
+            <br>
+            <a href='/dashboard/professor/add/:<%=professor.id%>'><em>Click here</em></a> to add a course.
+        </p>
+    </div>
+
+            <% }%>
+       </div>
+       </div>
+       <% } else { %>
+        <div 
+        style="position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)" 
+        class="container">
+        <p class="text-center lead">
+            You are not having any courses under you currently.
+            <br>
+            <a href='/dashboard/professor/add/:<%=professor.id%>'><em>Click here</em></a> to add a course.
+        </p>
+    </div>
+       <%}%>
+    <%-include('./partials/scripts')%>
+</body>
+</html>

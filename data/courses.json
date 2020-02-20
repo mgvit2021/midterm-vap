@@ -1,0 +1,96 @@
+[
+	{
+		"id": "ee",
+		"title": "English for Engineers",
+		"t_id": "rj",
+		"offered_by": "Rajnikant",
+		"summary": "Upgrade your english skills from amatuer to professional english real quick!",
+		"tags": "english speaking literature",
+		"domain": "Literature",
+		"details": {
+			"duration": "10 weeks",
+			"fees": "1000",
+			"certification": "Yes"
+		}
+	},
+	{
+		"id": "mls",
+		"title": "Machine Learning by Stanford",
+		"t_id": "ang",
+		"offered_by": "Andrew NG",
+		"summary": "Learn advanced machine learning techniques and algorithms and how to package and deploy your models to a production environment. Gain practical experience and use it to explore more!Learn advanced machine learning techniques and algorithms and how to package and deploy your models to a production environment. Gain practical experience and use it to explore more!",
+		"tags": "python ml machine-learning andrew",
+		"domain": "Computer Science",
+		"details": {
+			"duration": "10 weeks",
+			"fees": "1000",
+			"certification": "Yes"
+		}
+	},
+	{
+		"id": "aws",
+		"title": "AWS Concepts",
+		"t_id": "js",
+		"offered_by": "Jon Snow",
+		"summary": "The AWS Solutions Architect Certification training will enable you to design, plan and scale AWS implementations utilizing over 70 cloud computing services. The course is aligned with the latest AWS exam featuring Amazon designated best practices.",
+		"tags": "aws cloud solution-architect",
+		"domain": "Cloud Computing",
+		"details": {
+			"duration": "10 weeks",
+			"fees": "1000",
+			"certification": "Yes"
+		}
+	},
+	{
+		"id": "ms9GMT44",
+		"title": "Deep Learning",
+		"t_id": "rk",
+		"offered_by": "Rajnikant",
+		"summary": "Special Appearance of Andrew NG",
+		"domain": "Computer Science",
+		"details": {
+			"duration": "10 weeks",
+			"fees": "1000",
+			"certification": "Yes"
+		}
+	},
+	{
+		"id": "N6rsHWQs",
+		"title": "Deep Learning",
+		"t_id": "rk",
+		"offered_by": "Rajnikant",
+		"summary": "1234567890",
+		"domain": "Computer Science",
+		"details": {
+			"duration": "10 weeks",
+			"fees": "1000",
+			"certification": "Yes"
+		}
+	},
+	{
+		"id": "FpTXhbg4",
+		"title": "Vanswer – A question answer portal for students (Website)   ",
+		"t_id": "rk",
+		"offered_by": "Rajnikant",
+		"summary": "1234567890",
+		"domain": "Computer Science",
+		"details": {
+			"duration": "10 weeks",
+			"fees": "1000",
+			"certification": "Yes"
+		}
+	},
+	{
+		"id": "ajyHh-yI",
+		"title": "New Course Check",
+		"t_id": "rk",
+		"offered_by": "Rajnikant",
+		"summary": "This is a new course!",
+		"domain": "Computer Science",
+		"details": {
+			"duration": "10 weeks",
+			"fees": "1000",
+			"certification": "No"
+		}
+	}
+]

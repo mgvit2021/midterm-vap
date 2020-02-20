@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Company|Register</title>
+    <%-include('./partials/styles')%>  
+    <style>
+            body {
+          background: url('https://image.shutterstock.com/z/stock-vector-vector-e-learning-pattern-e-learning-seamless-background-1064804321.jpg') fixed;
+          -webkit-background-size: cover;
+          background-position: center;
+          -moz-background-size: cover;
+          background-size: cover;
+          -o-background-size: cover;
+        }
+            </style>
+</head>
+<body>
+    <div class="container">
+            <div class="row mt-4">
+                <div class="col-md-6 m-auto">
+                    <div class="card card-body mt-4 shadow-lg">
+                            <h1 class="text-center mb-3">
+                                <i class="fas fa-user-plus"></i> Register</h1>
+                                
+                                <form method="POST">
+                                    <%-include('./partials/messages'); %>
+                                <div class="form-group">
+                                <label for="name">Name</label>
+                                <input
+                                    type="name"
+                                    id="name"
+                                    name="name"
+                                    class="form-control"
+                                    placeholder="Enter Name"
+                                    value="<%= typeof name != 'undefined' ? name : '' %>"/>
+                                </div>
+                                <div class="form-group">
+                                <label for="email">Email</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    class="form-control"
+                                    placeholder="Enter Email"
+                                    value="<%= typeof email != 'undefined' ? email : '' %>"/>
+                                </div>
+                                <div class="form-group">
+                                <label for="password">Password</label>
+                                <input
+                                    type="password"
+                                    id="password"
+                                    name="password"
+                                    class="form-control"
+                                    placeholder="Create Password"
+                                    value="<%= typeof password != 'undefined' ? password : '' %>"/>
+                                </div>
+                                <div class="form-group">
+                                <label for="password2">Confirm Password</label>
+                                <input
+                                    type="password"
+                                    id="password2"
+                                    name="password2"
+                                    class="form-control"
+                                    placeholder="Confirm Password"
+                                    value="<%= typeof password2 != 'undefined' ? password2 : '' %>"/>
+                                </div>
+                                <div class="radio">
+                                <label class="radio-inline mr-4"><input type="radio" name="prof" value="student" checked> &nbsp;Student</label>
+                                <label class="radio-inline"><input type="radio" name="prof" value="professor"> &nbsp;Professor</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">
+                                Register
+                                </button>
+                            </form>
+                            <p class="lead mt-4">Have An Account? <b><a href="/users/login" style="font-weight:bolder;color: chocolate;">Login</a></b></p>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+    <%-include('./partials/scripts')%>     
+</body>
+</html>

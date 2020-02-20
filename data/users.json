@@ -1,0 +1,60 @@
+[
+	{
+		"id": "m12",
+		"name": "Mridul Gupta",
+		"email": "mridul108@gmail.com",
+		"password": "123456",
+		"details": {
+			"age": 24,
+			"courses": [
+				"ee"
+			]
+		}
+	},
+	{
+		"id": "m13",
+		"name": "Mridul Gupta",
+		"email": "mridul@gmail.com",
+		"password": "123456",
+		"details": {
+			"age": 24,
+			"courses": [
+				"ee",
+				"mls",
+				"aws"
+			]
+		}
+	},
+	{
+		"id": "RCNdk8L5",
+		"name": "Mridul Gupta",
+		"email": "mridulgpt820@gmail.com",
+		"password": "123456",
+		"details": {
+			"courses": [
+				"mls",
+				"ee"
+			]
+		}
+	},
+	{
+		"id": "0BGtgmu7",
+		"name": "newUser",
+		"email": "new@11111",
+		"password": "123456",
+		"details": {
+			"courses": []
+		}
+	},
+	{
+		"id": "Cx_7eleY",
+		"name": "New User",
+		"email": "new@1234",
+		"password": "123456",
+		"details": {
+			"courses": [
+				"ee"
+			]
+		}
+	}
+]

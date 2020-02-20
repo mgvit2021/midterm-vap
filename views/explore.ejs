@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coursify|Explore</title>
+    <%-include('./partials/styles')%>  
+    <style>
+    body {
+  background: url(' http://getwallpapers.com/wallpaper/full/c/1/b/302104.jpg') fixed;
+  -webkit-background-size: cover;
+  background-position: center;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+    }
+    </style>
+</head>
+<body>
+    <%-include('./partials/nav_default')%>  
+    <div class="container mt-4">
+        <% if (filter==false) { %>
+            <a class="btn btn-primary" href='/dashboard/student/:<%=sid%>'>Go Back</a>
+        <% } else { %>
+            <a class="btn btn-primary" href='/dashboard/explore/:<%=sid%>'>Go Back</a>
+        <%}%>
+    </div>
+    <% if (newCourses.length >0) { %>
+
+        <% if (filter==false) { %>
+        <div class="container mt-4">
+                <form class="form-inline">
+                    <label for="filter" class="mr-4 control-label">Filter Domain: </label>
+                    <select class="form-control pr-4" name="filter" onchange="location = this.value;">
+                            <% unique_domains.forEach(element => { %>
+                                <option value='filter/:<%=element%>&<%=sid%>'><%=element%></option>
+                                <%})%> 
+                    </select>
+                </form>
+            </div>
+            <% } %>
+        <div class="container mt-4">
+                <div class="card-column">
+                <% newCourses.forEach(element => { %>
+
+                <div class="card mb-4 shadow">
+                        <div class="card-header">
+                                <h5 class="card-title"><%= element.title %> </h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text lead"><%= element.summary %>.
+                            </p>
+                        </div>
+                    <div class="card-footer">
+                        
+                            <b class="float-left">Prof: <%=element.offered_by %> </b>
+                            <div class="float-right">
+                            <form method="POST">
+                                <a class="btn btn-primary" href='detail/:<%=element.id%>&<%=sid%> '>View Details</a>
+                                <button type="submit" name="sub" value='<%=element.id%>' class="btn btn-primary">
+                                        Subscribe
+                                </button>
+                            </form>
+                            </div>
+                    </div>
+                </div>
+            
+                <% }) %>
+            </div>
+            </div>
+            <% }else { %>
+                <div 
+        style="position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)" 
+        class="container">
+                <p class="text-center lead">You are already enrolled in all the courses.<br>
+                    <a href='/dashboard/student/:<%=sid%>'><em>Click here</em></a> to go to dashboard.
+                </p>
+            </div>
+            <% } %>
+            <%-include('./partials/scripts')%>
+</body>
+</html>
