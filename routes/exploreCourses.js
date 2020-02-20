@@ -49,6 +49,20 @@ router.post('/:sid',function(req,res){
     })
     return data;
   })
+  .then(()=>{
+    updateJsonFile('sample.json',data=>{
+      data.forEach((course)=>{
+        if(course_id==course.id){
+          if(typeof course.registered=='undefined'){
+              course.registered=1;
+          }else{
+              course.registered+=1
+          }
+        }
+      });
+      return data;
+    })
+  })
   .then(()=>res.redirect(`/dashboard/student/:${sid}`))
 });
 

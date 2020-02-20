@@ -31,11 +31,6 @@
 		"password": "123456",
 		"courses": [
 			{
-				"id": "rRAHinYi",
-				"title": "Machine Learning, Stanford",
-				"summary": "Learn to create Machine Learning Algorithms in Python and R from two Data Science experts. Code templates included."
-			},
-			{
 				"id": "zkgbEOEp",
 				"title": "Tensorflow.JS",
 				"summary": "Learn how to use Google's Deep Learning Framework - TensorFlow with Python! Solve problems with cutting edge techniques!"

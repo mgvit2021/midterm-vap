@@ -10,10 +10,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Course Details</title>
     <%-include('./styles')%>  
+    <style>
+    @media (max-width: 499px) 
+{
+    #jumbo h1
+    {
+        font-size: 40px;
+    }
+}
+    </style>
 </head>
 <body>
     <div class="container mt-4">
-        <div class="jumbotron shadow">
+        <div id="jumbo" class="jumbotron shadow">
                 <h1 class="display-3"><%=details.title%> </h1>
                 <p class="lead"><%=details.summary%></p>
                 <hr class="my-4">

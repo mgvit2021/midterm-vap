@@ -10,7 +10,8 @@
 			"duration": "10 weeks",
 			"fees": "10000",
 			"certification": "Yes"
-		}
+		},
+		"registered": 420
 	},
 	{
 		"id": "e_4dwZi3",
@@ -23,20 +24,8 @@
 			"duration": "10 weeks",
 			"fees": "5000",
 			"certification": "Yes"
-		}
-	},
-	{
-		"id": "rRAHinYi",
-		"title": "Machine Learning, Stanford",
-		"t_id": "IF6k4wxX",
-		"offered_by": "Andrew Ng",
-		"summary": "Learn to create Machine Learning Algorithms in Python and R from two Data Science experts. Code templates included.",
-		"domain": "Computer Science",
-		"details": {
-			"duration": "8 weeks",
-			"fees": "1000",
-			"certification": "Yes"
-		}
+		},
+		"registered": 30
 	},
 	{
 		"id": "zkgbEOEp",
@@ -49,6 +38,7 @@
 			"duration": "4 weeks",
 			"fees": "5000",
 			"certification": "Yes"
-		}
+		},
+		"registered": 6020
 	}
 ]

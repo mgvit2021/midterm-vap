@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Coursify|Explore</title>
-    <%-include('./partials/styles')%>  
+    <%-include('./partials/styles')%>
+    <style>
+            @media (max-width: 465px) 
+        {
+            .op
+            {
+                display:none;
+            }
+        }
+            </style>
     <style>
     body {
   background: url(' http://getwallpapers.com/wallpaper/full/c/1/b/302104.jpg') fixed;
@@ -54,11 +63,17 @@
                             </p>
                         </div>
                     <div class="card-footer">
-                        
-                            <b class="float-left">Prof: <%=element.offered_by %> </b>
+                            <div class="float-left">
+                                <b>Prof: <%=element.offered_by %> </b>
+                                <% if (typeof element.registered!='undefined') { %>
+                                    <p class="op"><b>Enrolled: </b><%= element.registered %></p>
+                                <% } else{%>
+                                    <i class="ml-2 op" style="color:rgb(49, 185, 36)">Active</i>
+                                <% } %> 
+                            </div>
                             <div class="float-right">
                             <form method="POST">
-                                <a class="btn btn-primary" href='detail/:<%=element.id%>&<%=sid%> '>View Details</a>
+                                <a class="btn btn-primary" href='/dashboard/explore/detail/:<%=element.id%>&<%=sid%> '>View Details</a>
                                 <button type="submit" name="sub" value='<%=element.id%>' class="btn btn-primary">
                                         Subscribe
                                 </button>
