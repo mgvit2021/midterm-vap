@@ -34,6 +34,10 @@ lodash v4.17.15
 - Professor : *Professor details database*
 - Courses : *Course details database*  
 
+#### Class files
+- FileDataOperationsClass : *Supports all file related operations*
+- UpdateFileClass : *Supports functions of writing to course database* 
+
 #### There are 4 main routes:
 - **Index:**
   * ***/*** : Home page 
