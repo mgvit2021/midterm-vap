@@ -32,7 +32,7 @@ lodash v4.17.15
 #### Database Files -data/
 - Users : *Student details database*
 - Professor : *Professor details database*
-- courses : *Course details database*  
+- Courses : *Course details database*  
 
 #### There are 4 main routes:
 - **Index:**
