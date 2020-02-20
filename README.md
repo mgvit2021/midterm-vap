@@ -32,17 +32,14 @@ lodash v4.17.15
 #### There are 4 main routes:
 - **Index:**
   * ***/*** : Home page 
-  
 - **Users:**
   * ***/users/login*** : Login Page
   * ***/users/register*** : Register Page 
-  
 - **Dashboard:**
   * ***/dashboard/student/*** : Student dashboard consisting of registered courses.
   * ***/dashboard/professor/*** : Professor dashboard consisting of published  courses.
   * ***/dashboard/professor/add/*** : Creating and publishing a course.
   * ***/dashboard/professor/edit/*** : Editing a previously published course 
-  
 - **ExploreCourses:**
   * ***/dashboard/explore/*** : Explore all courses available in the catalog.
   * ***/dashboard/explore/detail*** : Gets details of the particular course.
