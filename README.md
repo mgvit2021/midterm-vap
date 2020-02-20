@@ -27,7 +27,12 @@ lodash v4.17.15
 - Course Add/Drop
 - Explore course catalog
 - Course details
-- Publish new courses
+- Publish new courses  
+
+#### Database Files -data/
+- Users : *Student details database*
+- Professor : *Professor details database*
+- courses : *Course details database*  
 
 #### There are 4 main routes:
 - **Index:**
