@@ -27,26 +27,32 @@ lodash v4.17.15
 - Course Add/Drop
 - Explore course catalog
 - Course details
-- Publish new courses
+- Publish new courses  
+
+#### Database Files -data/
+- Users : *Student details database*
+- Professor : *Professor details database*
+- Courses : *Course details database*  
+
+#### Class files
+- FileDataOperationsClass : *Supports all file related operations*
+- UpdateFileClass : *Supports functions of writing to course database* 
 
 #### There are 4 main routes:
 - **Index:**
   * ***/*** : Home page 
-  
 - **Users:**
   * ***/users/login*** : Login Page
   * ***/users/register*** : Register Page 
-  
 - **Dashboard:**
   * ***/dashboard/student/*** : Student dashboard consisting of registered courses.
   * ***/dashboard/professor/*** : Professor dashboard consisting of published  courses.
   * ***/dashboard/professor/add/*** : Creating and publishing a course.
   * ***/dashboard/professor/edit/*** : Editing a previously published course 
-  
 - **ExploreCourses:**
   * ***/dashboard/explore/*** : Explore all courses available in the catalog.
   * ***/dashboard/explore/detail*** : Gets details of the particular course.
   * ***/dashboard/explore/filter*** : Displays the filtered list of courses w.r.t domain.
 
-## Copyright
-[Mridul Gupta](https://www.linkedin.com/in/mridul-gupta2021/)
+
+>[Mridul Gupta](https://www.linkedin.com/in/mridul-gupta2021/)
