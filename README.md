@@ -48,5 +48,5 @@ lodash v4.17.15
   * ***/dashboard/explore/detail*** : Gets details of the particular course.
   * ***/dashboard/explore/filter*** : Displays the filtered list of courses w.r.t domain.
 
-## Copyright
-[Mridul Gupta](https://www.linkedin.com/in/mridul-gupta2021/)
+
+>[Mridul Gupta](https://www.linkedin.com/in/mridul-gupta2021/)
