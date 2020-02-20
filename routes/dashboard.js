@@ -1,34 +1,25 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const updateJsonFile = require("update-json-file");
 const shortid = require('shortid');
 const _=require('lodash');
 
+const FileDataOperations=require('../FileDataOperationsClass');
+const UpdateOperations=require('../UpdateFileClass');
+
+//Initializing the classes
+const db=new FileDataOperations();
+const update=new UpdateOperations();
 
 const student_db='./data/users.json';
 const professor_db='./data/professors.json';
 const course_db='./data/courses.json';
 
-//Initializing the class
-const FileDataOperations=require('../FileDataOperationsClass');
-const UpdateOperations=require('../UpdateFileClass');
-const db=new FileDataOperations();
-const update=new UpdateOperations();
 
 
 //-------------------------PROFESSOR DASBOARD-----------------------//
 
-router.get('/professor/edit/:pid&:cid',(req,res)=>{
-    let pid=req.params.pid.replace(':','');
-    let cid=req.params.cid;
-    db.searchById(cid,course_db)
-    .then((course)=>{
-      let details=course.details;
-      res.render('edit_course',{pid,details})
-    })
-})
-
-
+//DISPLAY PROFESSOR DASHBOARD
 router.get('/professor/:pid',(req,res)=>{
   let pid=req.params.pid.replace(':','');
     db.searchById(pid,professor_db)
@@ -38,7 +29,7 @@ router.get('/professor/:pid',(req,res)=>{
       },500)                                              //Time to write file completely
     })
 })
-
+//DELETING PUBLISHED COURSES
 router.post('/professor/:pid',(req,res)=>{
 let pid=req.params.pid.replace(':','');
 const course_id=req.body.remv;
@@ -52,12 +43,20 @@ updateJsonFile(professor_db, data => {
   return data;
 })
 .then(()=>{
-    res.redirect(`/dashboard/professor/:${pid}`);
-})
+  updateJsonFile(course_db, data => {
+    data.forEach((course)=>{
+      if(course.id==course_id){
+        const index = data.indexOf(_.find(data,{id:course_id}))
+        data.splice(index, 1)
+      }
+    })
+    return data;
+  }).then(()=>{
+    res.redirect(`/dashboard/professor/:${pid}`)})
+  })
+});
 
-})
-
-
+//CREATING A COURSE
 router.get('/professor/add/:pid',(req,res)=>{
 let pid=req.params.pid.replace(':','');
 db.searchById(pid,professor_db)
@@ -65,8 +64,7 @@ db.searchById(pid,professor_db)
   res.render('add_course',{professor})
 })
 });
-
-
+//AND PUBLISHING A COURSE
 router.post('/professor/add/:pid',(req,res)=>{
 let pid=req.params.pid.replace(':','');
 const title=req.body.title;
@@ -97,7 +95,7 @@ db.searchById(pid,professor_db)
       certification:certification
     }
   }
-  update.addCourse(professor_db,newCourse)
+  update.addCourse(course_db,newCourse)
   .then(()=>{
     update.addCoursetoProf(professor_db,newCourse,pid)
     .then(()=>{res.redirect(`/dashboard/professor/:${pid}`)})
@@ -124,16 +122,46 @@ db.searchById(pid,professor_db)
 }
 });
 
+//EDITING COURSE INFORMATION
+router.get('/professor/edit/:pid&:cid',(req,res)=>{
+    let pid=req.params.pid.replace(':','');
+    let cid=req.params.cid;
+    db.searchById(cid,course_db)
+    .then((course)=>{
+      let details=course.details;
+      res.render('edit_course',{pid,details})
+    })
+})
+router.post('/professor/edit/:pid&:cid',(req,res)=>{
+  let pid=req.params.pid.replace(':','');
+  let cid=req.params.cid;
+  const duration=req.body.duration;
+  const fees=req.body.fees;
+  const certification=req.body.certification;
+    updateJsonFile(course_db, data => {
+      data.forEach((core)=>{
+        if(core.id==cid){
+        core.details.duration = duration;
+        core.details.fees = fees;
+        core.details.certification = certification;}
+      })
+      return data;
+    })
+    .then(()=>res.redirect(`/dashboard/professor/:${pid}`))
+  })
+
+
 //-------------------------STUDENT DASHBOARD-----------------------//
 
+//DISPLAY DASHBOARD AND DELETE COURSES
 router.get('/student/:sid',function(req,res){
   var ret={};
   let sid=(req.params.sid).replace(':','');
   db.searchById(sid,student_db)
   .then((student)=>{
     ret.name=student.name;
-    if(typeof student.details.courses !='undefined'){
-      let clist=student.details.courses;
+    if(typeof student.courses !='undefined'){
+      let clist=student.courses;
       if(clist.length>0)
       {
         db.getCoursesRegisteredByStudent(clist,course_db)
@@ -162,8 +190,6 @@ router.get('/student/:sid',function(req,res){
   }).catch((err)=>console.log(err));
   
 });
-
-
 router.post('/student/:sid',function(req,res){
 
 const sid=(req.params.sid).replace(':','');
@@ -171,8 +197,8 @@ const course_id=req.body.unsub
 updateJsonFile(student_db, data => {
   data.forEach((student)=>{
     if(student.id==sid){
-      const index = (student.details.courses).indexOf(course_id);
-      student.details.courses.splice(index, 1)
+      const index = (student.courses).indexOf(course_id);
+      student.courses.splice(index, 1)
     }
   })
   return data;
@@ -180,7 +206,5 @@ updateJsonFile(student_db, data => {
 .then(()=>res.redirect(`/dashboard/student/:${sid}`))
 
 });
-
-
 
 module.exports = router;

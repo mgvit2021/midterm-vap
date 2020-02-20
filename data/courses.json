@@ -1,3 +1,54 @@
 [
-	
+	{
+		"id": "wNsOZETq",
+		"title": "Deep Learning",
+		"t_id": "LMB6h1eK",
+		"offered_by": "Mridul Gupta",
+		"summary": "If you want to break into AI, this Specialization will help you do so. Deep Learning is one of the most highly sought after skills in tech. We will help you become good at Deep Learning.",
+		"domain": "Computer Science",
+		"details": {
+			"duration": "10 weeks",
+			"fees": "10000",
+			"certification": "Yes"
+		}
+	},
+	{
+		"id": "e_4dwZi3",
+		"title": "Node JS Fundamentals",
+		"t_id": "LMB6h1eK",
+		"offered_by": "Mridul Gupta",
+		"summary": "Learn Node.js by building real-world applications with Node, Express, MongoDB, Jest, and more!",
+		"domain": "Computer Science",
+		"details": {
+			"duration": "10 weeks",
+			"fees": "5000",
+			"certification": "Yes"
+		}
+	},
+	{
+		"id": "rRAHinYi",
+		"title": "Machine Learning, Stanford",
+		"t_id": "IF6k4wxX",
+		"offered_by": "Andrew Ng",
+		"summary": "Learn to create Machine Learning Algorithms in Python and R from two Data Science experts. Code templates included.",
+		"domain": "Computer Science",
+		"details": {
+			"duration": "8 weeks",
+			"fees": "1000",
+			"certification": "Yes"
+		}
+	},
+	{
+		"id": "zkgbEOEp",
+		"title": "Tensorflow.JS",
+		"t_id": "IF6k4wxX",
+		"offered_by": "Andrew Ng",
+		"summary": "Learn how to use Google's Deep Learning Framework - TensorFlow with Python! Solve problems with cutting edge techniques!",
+		"domain": "Computer Science",
+		"details": {
+			"duration": "4 weeks",
+			"fees": "5000",
+			"certification": "Yes"
+		}
+	}
 ]

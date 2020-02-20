@@ -1,3 +1,45 @@
 [
-	
+	{
+		"id": "n5y3FD9n",
+		"name": "Mridul Gupta",
+		"email": "mridulgpt820@gmail.com",
+		"password": "123456",
+		"courses": []
+	},
+	{
+		"id": "LMB6h1eK",
+		"name": "Mridul Gupta",
+		"email": "mridul108@gmail.com",
+		"password": "123456",
+		"courses": [
+			{
+				"id": "wNsOZETq",
+				"title": "Deep Learning",
+				"summary": "If you want to break into AI, this Specialization will help you do so. Deep Learning is one of the most highly sought after skills in tech. We will help you become good at Deep Learning."
+			},
+			{
+				"id": "e_4dwZi3",
+				"title": "Node JS Fundamentals",
+				"summary": "Learn Node.js by building real-world applications with Node, Express, MongoDB, Jest, and more!"
+			}
+		]
+	},
+	{
+		"id": "IF6k4wxX",
+		"name": "Andrew Ng",
+		"email": "andrew@gmail.com",
+		"password": "123456",
+		"courses": [
+			{
+				"id": "rRAHinYi",
+				"title": "Machine Learning, Stanford",
+				"summary": "Learn to create Machine Learning Algorithms in Python and R from two Data Science experts. Code templates included."
+			},
+			{
+				"id": "zkgbEOEp",
+				"title": "Tensorflow.JS",
+				"summary": "Learn how to use Google's Deep Learning Framework - TensorFlow with Python! Solve problems with cutting edge techniques!"
+			}
+		]
+	}
 ]

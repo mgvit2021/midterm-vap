@@ -1,3 +1,19 @@
 [
-	
+	{
+		"id": "cCIoUN1j",
+		"name": "NewStudent",
+		"email": "new@123",
+		"password": "123456",
+		"courses": []
+	},
+	{
+		"id": "U3YK6haD",
+		"name": "Mridul Gupta",
+		"email": "mridul108@gmail.com",
+		"password": "123456",
+		"courses": [
+			"zkgbEOEp",
+			"wNsOZETq"
+		]
+	}
 ]

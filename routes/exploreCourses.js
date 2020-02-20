@@ -1,22 +1,22 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const updateJsonFile = require("update-json-file");
 const _=require('lodash');
 
 
 const student_db='./data/users.json';
-const professor_db='./data/professors.json';
 const course_db='./data/courses.json';
 
 //Initializing the class
 const FileDataOperations=require('../FileDataOperationsClass');
 const db=new FileDataOperations();
 
+//OPENS EXPLORE CATALOG
 router.get('/:sid',function(req,res){
   let sid=(req.params.sid).replace(':','');
   db.searchById(sid,student_db)
   .then((data)=>{
-    const subscribed_courses=data.details.courses;
+    const subscribed_courses=data.courses;
     db.getAllCoursesList(course_db)
     .then((courseList)=>{
       var newCourses=[];
@@ -37,23 +37,22 @@ router.get('/:sid',function(req,res){
 .catch((err_data)=>console.log(err_data))
 });
 
+//POST REQUEST WHEN COURSE IS SUBSCRIBED
 router.post('/:sid',function(req,res){
   const sid=(req.params.sid).replace(':','');
   const course_id=req.body.sub
   updateJsonFile(student_db, data => {
     data.forEach((student)=>{
       if(student.id==sid){
-        student.details.courses.push(course_id);
+        student.courses.push(course_id);
       }
     })
     return data;
   })
   .then(()=>res.redirect(`/dashboard/student/:${sid}`))
-  
-
 });
 
-
+//TO DISPLAY THE COURSE DETAILS PAGE
 router.get('/detail/:cid&:sid',(req,res)=>{
   let cid=req.params.cid.replace(':','');
   let sid=req.params.sid;
@@ -64,15 +63,14 @@ router.get('/detail/:cid&:sid',(req,res)=>{
   })
 })
 
-
-
+//TO FILTER THE COURSES BY DOMAINS
 router.get('/filter/:domain&:sid',(req,res)=>{
 
   const sid=req.params.sid;
   const ctag=req.params.domain.replace(':','');
   db.searchById(sid,student_db)
   .then((data)=>{
-    const subscribed_courses=data.details.courses;
+    const subscribed_courses=data.courses;
     db.getAllCoursesList(course_db)
     .then((courseList)=>{
       var newCourses=[];
@@ -93,7 +91,7 @@ router.post('/filter/:domain&:sid',function(req,res){
   updateJsonFile(student_db, data => {
     data.forEach((student)=>{
       if(student.id==sid){
-        student.details.courses.push(course_id);
+        student.courses.push(course_id);
       }
     })
     return data;

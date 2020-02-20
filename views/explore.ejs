@@ -33,6 +33,7 @@
                 <form class="form-inline">
                     <label for="filter" class="mr-4 control-label">Filter Domain: </label>
                     <select class="form-control pr-4" name="filter" onchange="location = this.value;">
+                            <option class="active" value='/dashboard/explore/:<%=sid%>'>None</option>
                             <% unique_domains.forEach(element => { %>
                                 <option value='filter/:<%=element%>&<%=sid%>'><%=element%></option>
                                 <%})%> 

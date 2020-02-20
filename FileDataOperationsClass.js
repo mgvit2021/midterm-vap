@@ -1,3 +1,6 @@
+/*
+    SINGLE CLASS TO HANDLE ALL THE FILE SEARCH AND OTHER OPERATIONS 
+*/
 const fs=require('fs');
 
 class FileDataOperations {

@@ -1,5 +1,8 @@
+/*
+    CLASS TO SYNCHRONISE TIME TO WRITE THE FILE IN COURSE DATABASE
+*/
 const updateJsonFile = require("update-json-file");
-const json = require('json-update');
+//
 class UpdateOperations{
 
     async addCourse(filename,newCourse){
