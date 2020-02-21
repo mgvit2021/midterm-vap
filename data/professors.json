@@ -34,6 +34,55 @@
 				"id": "zkgbEOEp",
 				"title": "Tensorflow.JS",
 				"summary": "Learn how to use Google's Deep Learning Framework - TensorFlow with Python! Solve problems with cutting edge techniques!"
+			},
+			{
+				"id": "BiSos2Ky",
+				"title": "Cad-Cam",
+				"summary": "CAD/CAM applications are used to both design a product and programme manufacturing processes, specifically, CNC machining. CAM software (US site) uses the models and assemblies created in CAD software to generate toolpaths that drive machine tools to turn designs into physical parts. CAD/CAM software is used to design and manufacture prototypes, finished parts and production runs."
+			},
+			{
+				"id": "1jV8HRbu",
+				"title": "MERN Stack Full Course",
+				"summary": "A set of hand-picked courses put together to meet all your requirements for becoming a full stack MERN web developer. This complete E-Degree program includes comprehensive courses, various labs and projects, quizzes, case studies, bonuses and so much more to ensure the complete learning of all the aspects of Mongo, Express Node and React."
+			}
+		]
+	},
+	{
+		"id": "85WPkYGg",
+		"name": "Dhoni",
+		"email": "dhoni@csk.com",
+		"password": "123456",
+		"courses": [
+			{
+				"id": "YkFdLvvC",
+				"title": "Cricket AllRound ",
+				"summary": "Learn from the legend himself, in our bootcamp course. We will provide you with all the items necessary to improve your game.\r\nExclusive Course"
+			}
+		]
+	},
+	{
+		"id": "e-A647ch",
+		"name": "Alexander",
+		"email": "alex@rule.com",
+		"password": "123456",
+		"courses": [
+			{
+				"id": "UU9ymV-z",
+				"title": "The Ancient Greeks",
+				"summary": "This is a survey of ancient Greek history from the Bronze Age to the death of Socrates in 399 BCE. Along with studying the most important events and personalities, we will consider broader issues such as political and cultural values and methods of historical interpretation."
+			}
+		]
+	},
+	{
+		"id": "uVPmWYuN",
+		"name": "Jon Snow",
+		"email": "jon@gmail.com",
+		"password": "123456",
+		"courses": [
+			{
+				"id": "bLC3FEWL",
+				"title": "Learn to say No",
+				"summary": "Improvise yourself by knowing when to say No, unlike me.\r\nUsing my past experience I'll help you achieve most out of your life."
 			}
 		]
 	}
