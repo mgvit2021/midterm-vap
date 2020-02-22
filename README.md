@@ -20,6 +20,20 @@ morgan v1.9.1
 lodash v4.17.15
 ```  
 
+### Installing
+
+Install node js from [here](https://nodejs.org/en/download/)  
+Check by typing this in command prompt.
+```
+node --version
+```
+
+If node is installed, directly copy the package.json file into your project directory and run
+```
+npm install
+```
+
+
 ---
 
 ## Features
