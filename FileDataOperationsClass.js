@@ -82,7 +82,7 @@ class FileDataOperations {
         return new Promise((resolve,reject)=>{
             fs.readFile(file,(err,data)=>{
                 var js=JSON.parse(data);
-                resolve(js);
+                resolve(js); //Returning whole list of courses(objects)
             })
         })
     }
