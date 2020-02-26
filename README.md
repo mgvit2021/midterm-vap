@@ -1,7 +1,7 @@
 # Coursify :books: - VAP Midterm 
 ### (*Main project in master branch, these are improvements based on reviews*)  
 
-####Improvements till now:
+#### Improvements till now:
 - Single class file supporting all methods (to be improvised more)
 - Followed NodeJS naming convention
 - Imroved performance by removing some bugs.
