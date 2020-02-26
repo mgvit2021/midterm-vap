@@ -4,7 +4,7 @@
 #### Improvements till now:
 - Single class file supporting all methods (to be improvised more)
 - Followed NodeJS naming convention
-- Imroved performance by removing some bad-codes.  
+- Improved performance by removing some bad-codes.  
 #### In Progress:
 - Joi Validation
 ---
