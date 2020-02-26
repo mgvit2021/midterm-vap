@@ -4,7 +4,7 @@
 #### Improvements till now:
 - Single class file supporting all methods (to be improvised more)
 - Followed NodeJS naming convention
-- Imroved performance by removing some bugs.
+- Imroved performance by removing some bad-codes.
 ---
 
 Coursify is a course management NodeJS-application that offers an interface for students to subscribe to multiple courses available online.  
