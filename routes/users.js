@@ -6,36 +6,35 @@ const updateJsonFile = require("update-json-file");
 
 
 //All database file paths
-const student_db='./data/users.json';
-const professor_db='./data/professors.json';
-const course_db='./data/courses.json';
+const studentData='./data/users.json';
+const professorData='./data/professors.json';
 
 //Initializing the class
-const FileDataOperations=require('../FileDataOperationsClass');
+const {FileDataOperations,UpdateOperations}=require('../FileDataOperationsClass');
 const db=new FileDataOperations();
 
-
-
+//default
 router.get('/', function(req, res) {
   res.redirect('/users/login');
 });
 
-// --------------------------------------LOGIN-----------------------------------
-
+// -LOGIN-
 router.get('/login', function(req, res) {
   res.render('login');
 });
+
+
 router.post('/login', function(req, res) {
   let user=req.body.email;
   let pass=req.body.password;
-  let who=req.body.prof;
+  let who=req.body.type;
   var dbPath="";
   //SET DATABASE PATH ACCORDING TO LOGIN
-  if(who=='student'){
-    dbPath=student_db;
+  if(who==='student'){
+    dbPath=studentData;
   }
   else{
-    dbPath=professor_db;
+    dbPath=professorData;
   }
 
   //CHECK FOR AUTHENTICITY
@@ -46,31 +45,30 @@ router.post('/login', function(req, res) {
       res.redirect(`/dashboard/${who}/:${id}`)
     })
     .catch((err_data)=>{
-      let err=err_data.err;
-      errors.push({msg:err});
+      errors.push({msg:err_data});
       res.render('login',{errors})
   })
 });
 
-// --------------------------------------REGISTRATION-----------------------------------
+// --REGISTRATION--
 
 router.get('/register', function(req, res) {
   res.render('register');
 });
 
 router.post('/register',function(req,res){
-  const{name,email,password,password2,prof}=req.body;
+  const{name,email,password,password2,type}=req.body;
   var filePath;
 
   //CHECKING REGISTRATION TYPE
-  if(prof=="student"){
-    filePath=student_db;
+  if(type==='student'){
+    filePath=studentData;
   }
   else{
-    filePath=professor_db;
+    filePath=professorData;
   }
 
-  //CHECKING ERRORS IN REGISTRATION
+  //CHECKING ERRORS IN REGISTRATION -- to be added JOI VALIDATION
   var errors=[];
   if(!name ||!email ||!password ||!password2){
     errors.push({msg:"All feilds are mandatory"});
@@ -84,33 +82,28 @@ router.post('/register',function(req,res){
   //IF SOME ERROR EXISTS
   if(errors.length>0){
     res.render('register',{errors,name,email,password,password2});
-  }
-
-  //IF NO ERRORS
-  else{
+  }else{
     //AUTHENTICATE USER
     db.authenticateUser(email,password,filePath)  //Resolves if user is already registered and sends warning
     .then((data)=>{
         errors.push({msg:"User already Exists!"})
         res.render('register',{errors,name,email,password,password2});
-      })
-
-      //REJECTS IF USER DOESNOT EXISTS AND CREATES ACCOUNT
-      .catch((err_data)=>{
-              var newUser={
-                id:shortid.generate(),
-                name:name,
-                email:email,
-                password:password,
-                courses:[]
-              }
-              //ADD USER TO FILE
-              updateJsonFile(filePath, data => {
-                data.push(newUser);
-                return data;
-            });
-            res.redirect('/users/login');
     })
+    .catch((err_data)=>{
+        var newUser={
+          id:shortid.generate(),
+          name:name,
+          email:email,
+          password:password,
+          courses:[]
+        }
+        //ADD USER TO FILE
+        updateJsonFile(filePath, data => {
+          data.push(newUser);
+          return data;
+      });
+      res.redirect('/users/login');
+    });
   }
 });
 module.exports = router;

@@ -3,116 +3,120 @@ const router = express.Router();
 const updateJsonFile = require("update-json-file");
 const _=require('lodash');
 
-
-const student_db='./data/users.json';
-const course_db='./data/courses.json';
-
+const studentData='./data/users.json';
+const courseData='./data/courses.json';
 //Initializing the class
-const FileDataOperations=require('../FileDataOperationsClass');
+const {FileDataOperations,UpdateOperations}=require('../FileDataOperationsClass');
 const db=new FileDataOperations();
+
 
 //OPENS EXPLORE CATALOG
 router.get('/:sid',function(req,res){
   let sid=(req.params.sid).replace(':','');
-  db.searchById(sid,student_db)
+  db.searchById(sid,studentData)
   .then((data)=>{
-    const subscribed_courses=data.courses;
-    db.getAllCoursesList(course_db)
+    const registeredCourses=data.courses;
+    db.getAllCoursesList(courseData)
     .then((courseList)=>{
+
       var newCourses=[];
-        _.forEach(courseList,course=>{
-        var isthere=_.includes(subscribed_courses,course.id);
+      _.forEach(courseList,course=>{
+        var isthere=_.includes(registeredCourses,course.id);
         if(!isthere){
           newCourses.push(course);
         }
-      })
-      var domains=[]
+      });
+
+      var domains=[];
       newCourses.forEach((course)=>{
         domains.push(course.domain);
-      })
-      unique_domains=_.uniq(domains)
-      res.render('explore',{sid,newCourses,unique_domains,filter:false});
+      });
+
+      uniqueDomains=_.uniq(domains);
+      res.render('explore',{sid,newCourses,uniqueDomains,filter:false});
+    })
   })
-})
-.catch((err_data)=>console.log(err_data))
+  .catch((err)=>console.log(err));
+
 });
 
 //POST REQUEST WHEN COURSE IS SUBSCRIBED
 router.post('/:sid',function(req,res){
   const sid=(req.params.sid).replace(':','');
-  const course_id=req.body.sub
-  updateJsonFile(student_db, data => {
-    data.forEach((student)=>{
-      if(student.id==sid){
-        student.courses.push(course_id);
-      }
-    })
+  const courseId=req.body.sub;
+
+  updateJsonFile(studentData, data => {
+    var student=_.find(data,{id:sid});
+    student.courses.push(courseId);
     return data;
   })
   .then(()=>{
-    updateJsonFile('sample.json',data=>{
-      data.forEach((course)=>{
-        if(course_id==course.id){
-          if(typeof course.registered=='undefined'){
-              course.registered=1;
-          }else{
-              course.registered+=1
-          }
-        }
-      });
+    updateJsonFile(courseData,data=>{
+
+      var course=_.find(data,{id:courseId});
+      if(typeof course.registered==='undefined'){
+          course.registered=1;
+      }else{
+          course.registered+=1
+      }
+
       return data;
-    })
+    });
   })
   .then(()=>res.redirect(`/dashboard/student/:${sid}`))
+  .catch((err)=>console.log(err));
 });
 
 //TO DISPLAY THE COURSE DETAILS PAGE
 router.get('/detail/:cid&:sid',(req,res)=>{
   let cid=req.params.cid.replace(':','');
   let sid=req.params.sid;
-  db.searchById(cid,course_db)
+  db.searchById(cid,courseData)
   .then((course)=>{
     let details=course;
-    res.render('partials/view_details',{sid,details})
+    res.render('partials/view_details',{sid,details});
   })
+  .catch((err)=>console.log(err));
 })
 
 //TO FILTER THE COURSES BY DOMAINS
 router.get('/filter/:domain&:sid',(req,res)=>{
 
+  const courseDomain=req.params.domain.replace(':','');
   const sid=req.params.sid;
-  const ctag=req.params.domain.replace(':','');
-  db.searchById(sid,student_db)
+
+  db.searchById(sid,studentData)
   .then((data)=>{
-    const subscribed_courses=data.courses;
-    db.getAllCoursesList(course_db)
+    const registeredCourses=data.courses;
+
+    db.getAllCoursesList(courseData)
     .then((courseList)=>{
       var newCourses=[];
       _.forEach(courseList,course=>{
-        var isthere=_.includes(subscribed_courses,course.id);
-        if(!isthere && course.domain==ctag){
+        var isThere=_.includes(registeredCourses,course.id); //returns boolean value
+        if(!isThere && course.domain==courseDomain){
           newCourses.push(course);
         }
-      })
+      });
       res.render('explore',{sid,newCourses,filter:true});
+    });
+
   })
-})
+  .catch((err)=>console.log(err));
+
 });
 
 router.post('/filter/:domain&:sid',function(req,res){
   const sid=req.params.sid;
-  const course_id=req.body.sub
-  updateJsonFile(student_db, data => {
-    data.forEach((student)=>{
-      if(student.id==sid){
-        student.courses.push(course_id);
-      }
-    })
+  const courseId=req.body.sub;
+  updateJsonFile(studentData, data => {
+    var student=_.find(data,{id:sid});
+    student.courses.push(courseId);
     return data;
   })
   .then(()=>res.redirect(`/dashboard/student/:${sid}`))
+  .catch((err)=>console.log(err));
   
-
 });
 
 module.exports=router;

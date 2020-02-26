@@ -38,47 +38,7 @@
 			"fees": "5000",
 			"certification": "Yes"
 		},
-		"registered": 30
-	},
-	{
-		"id": "zkgbEOEp",
-		"title": "Tensorflow.JS",
-		"t_id": "IF6k4wxX",
-		"offered_by": "Andrew Ng",
-		"summary": "Learn how to use Google's Deep Learning Framework - TensorFlow with Python! Solve problems with cutting edge techniques!",
-		"domain": "Computer Science",
-		"details": {
-			"duration": "4 weeks",
-			"fees": "5000",
-			"certification": "Yes"
-		},
-		"registered": 6020
-	},
-	{
-		"id": "BiSos2Ky",
-		"title": "Cad-Cam",
-		"t_id": "IF6k4wxX",
-		"offered_by": "Andrew Ng",
-		"summary": "CAD/CAM applications are used to both design a product and programme manufacturing processes, specifically, CNC machining. CAM software (US site) uses the models and assemblies created in CAD software to generate toolpaths that drive machine tools to turn designs into physical parts. CAD/CAM software is used to design and manufacture prototypes, finished parts and production runs.",
-		"domain": "Mechanical Engineering",
-		"details": {
-			"duration": "10 weeks",
-			"fees": "10000",
-			"certification": "Yes"
-		}
-	},
-	{
-		"id": "1jV8HRbu",
-		"title": "MERN Stack Full Course",
-		"t_id": "IF6k4wxX",
-		"offered_by": "Andrew Ng",
-		"summary": "A set of hand-picked courses put together to meet all your requirements for becoming a full stack MERN web developer. This complete E-Degree program includes comprehensive courses, various labs and projects, quizzes, case studies, bonuses and so much more to ensure the complete learning of all the aspects of Mongo, Express Node and React.",
-		"domain": "Development",
-		"details": {
-			"duration": "10 weeks",
-			"fees": "4000",
-			"certification": "Yes"
-		}
+		"registered": 31
 	},
 	{
 		"id": "YkFdLvvC",
@@ -91,19 +51,6 @@
 			"duration": "20 weeks",
 			"fees": "10000",
 			"certification": "Yes"
-		}
-	},
-	{
-		"id": "UU9ymV-z",
-		"title": "The Ancient Greeks",
-		"t_id": "e-A647ch",
-		"offered_by": "Alexander",
-		"summary": "This is a survey of ancient Greek history from the Bronze Age to the death of Socrates in 399 BCE. Along with studying the most important events and personalities, we will consider broader issues such as political and cultural values and methods of historical interpretation.",
-		"domain": "History",
-		"details": {
-			"duration": "8 weeks",
-			"fees": "9999",
-			"certification": "No"
 		}
 	}
 ]
