@@ -3,12 +3,14 @@ const router = express.Router();
 const updateJsonFile = require("update-json-file");
 const shortid = require('shortid');
 const _=require('lodash');
-
 const {FileDataOperations,UpdateOperations}=require('../FileDataOperationsClass');
+const ValidationClass= require('../ValidationClass');
+
 
 //Initializing the classes
 const db=new FileDataOperations();
 const update=new UpdateOperations();
+const validateData=new ValidationClass();
 
 //Database paths
 const studentData='./data/users.json';
@@ -28,15 +30,17 @@ router.get('/professor/:pid',(req,res)=>{
 });
 
 //delete published courses
-router.post('/professor/:pid',(req,res)=>{
+router.post('/professor/:pid',async (req,res)=>{
   let pid=req.params.pid.replace(':','');
   const courseId=req.body.remv;
+  
+  
+  await update.removeCourseFromProfessor(professorData,courseId,pid);
 
-  update.removeCourseFromProfessor(professorData,courseId,pid);
-
-  update.removeCourse(coursesData,courseId)
+  await update.removeCourse(coursesData,courseId)
   .then(()=>{res.redirect(`/dashboard/professor/:${pid}`)})
   .catch((err)=>console.log(err));
+  
 
 });
 
@@ -51,17 +55,22 @@ router.get('/professor/add/:pid',(req,res)=>{
   .catch((err)=>console.log(err));
 
 });
+
+
   //publishing course
-router.post('/professor/add/:pid',(req,res)=>{
+router.post('/professor/add/:pid',async (req,res)=>{
 
   let pid=req.params.pid.replace(':','');
-  const {title,summary,domain,duration,fees,certification} = req.body;
+  const {title,domain,duration,fees,certification,summary} = req.body;
   var errors=[];
   //-----Joi schema to be used
-  if(title=='' || summary==''||domain=='' || duration==''||fees==''||certification==''){
-    errors.push({msg:"All fields are required"})
+  var {error}=validateData.createCourseValidation(req.body);
+
+  if(error){
+    var errMessage=error.details[0].message;
+    errors.push({msg:errMessage});
     professor={id:pid};
-    res.render('add_course',{errors,professor})
+    res.render('add_course',{errors,professor,title,domain,duration,fees,certification,summary});
   }else{
     db.searchById(pid,professorData)
     .then((professor)=>{

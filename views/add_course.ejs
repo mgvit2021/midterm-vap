@@ -22,7 +22,8 @@
                 id="title"
                 name="title"
                 class="form-control"
-                placeholder="Course title"/>
+                placeholder="Course title"
+                value="<%= typeof title != 'undefined' ? title : '' %>"/>
             </div>
             <div class="form-group">
 
@@ -31,7 +32,8 @@
                       id="domain"
                       name="domain"
                       class="form-control"
-                      placeholder="Course Domain"/>
+                      placeholder="Course Domain"
+                      value="<%= typeof domain != 'undefined' ? domain : '' %>"/>
             </div>
             <div class="form-group">
                     <input
@@ -39,7 +41,8 @@
                       id="duration"
                       name="duration"
                       class="form-control"
-                      placeholder="Course Duration (specify week/hours)"/>
+                      placeholder="Course Duration (specify week/hours)"
+                      value="<%= typeof duration != 'undefined' ? duration : '' %>"/>
             </div>
             <div class="form-group">
             <div class="input-group">
@@ -51,7 +54,8 @@
                       id="fees"
                       name="fees"
                       class="form-control"
-                      placeholder="Course Fees"/>
+                      placeholder="Course Fees"
+                      value="<%= typeof fees != 'undefined' ? fees : '' %>"/>
             </div>
         </div>
             <div class="form-group">
@@ -60,7 +64,8 @@
                       id="certification"
                       name="certification"
                       class="form-control"
-                      placeholder="Certification (Yes/No)"/>
+                      placeholder="Certification (Yes/No)"
+                      value="<%= typeof certification != 'undefined' ? certification : '' %>"/>
             </div>
             <div class="form-group">
                     <textarea class="form-control" id="summary" rows="3" name="summary" placeholder="Course Summary" ></textarea>

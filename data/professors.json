@@ -29,7 +29,18 @@
 		"name": "Andrew Ng",
 		"email": "andrew@gmail.com",
 		"password": "123456",
-		"courses": []
+		"courses": [
+			{
+				"id": "zkgbEOEp",
+				"title": "Tensorflow.JS",
+				"summary": "Learn how to use Google's Deep Learning Framework - TensorFlow with Python! Solve problems with cutting edge techniques!"
+			},
+			{
+				"id": "BiSos2Ky",
+				"title": "Cad-Cam",
+				"summary": "CAD/CAM applications are used to both design a product and programme manufacturing processes, specifically, CNC machining. CAM software (US site) uses the models and assemblies created in CAD software to generate toolpaths that drive machine tools to turn designs into physical parts. CAD/CAM software is used to design and manufacture prototypes, finished parts and production runs."
+			}
+		]
 	},
 	{
 		"id": "85WPkYGg",
@@ -67,19 +78,6 @@
 				"id": "bLC3FEWL",
 				"title": "Learn to say No",
 				"summary": "Improvise yourself by knowing when to say No, unlike me.\r\nUsing my past experience I'll help you achieve most out of your life."
-			}
-		]
-	},
-	{
-		"id": "aWCs03_R",
-		"name": "CheckUser",
-		"email": "check@123",
-		"password": "123456",
-		"courses": [
-			{
-				"id": "QE4qPnIG",
-				"title": "Check Course",
-				"summary": "Check Summary : random long summary to check response time of the server.\r\nCheck Summary : random long summary to check response time of the server.\r\nCheck Summary : random long summary to check response time of the server.Check Summary : random long summary to check response time of the server.Check Summary : random long summary to check response time of the server."
 			}
 		]
 	}
