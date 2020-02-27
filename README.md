@@ -1,5 +1,13 @@
 # Coursify :books: - VAP Midterm 
-### (*Main project in master branch, these are improvements based on reviews*)
+### (*Main project in master branch, these are improvements based on reviews*)  
+
+#### Improvements till now:
+- Single class file supporting all methods (to be improvised more)
+- Followed NodeJS naming convention
+- Improved performance by removing some bad-codes.  
+#### In Progress:
+- Joi Validation
+---
 
 Coursify is a course management NodeJS-application that offers an interface for students to subscribe to multiple courses available online.  
 Provides professors with facility to add their own courses online.
